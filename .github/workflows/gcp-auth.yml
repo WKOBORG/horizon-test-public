@@ -3,9 +3,8 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   deploy:
+    environment: 'PROD'
     runs-on: ubuntu-latest
-    with:
-      environment: 'PROD'
     permissions:
       contents: 'read'
       id-token: 'write'
