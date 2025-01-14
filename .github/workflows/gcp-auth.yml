@@ -4,6 +4,8 @@ on: [push]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    with:
+      environment: 'PROD'
     permissions:
       contents: 'read'
       id-token: 'write'
